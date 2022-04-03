@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body>
+   <h1>Main page</h1>
+   <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Description</th>
+        <th>Author</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in posts %}
+        <tr>
+          <td>{{ post.subject }}</td>
+          <td>{{ post.description }}</td>
+          <td>{{ post.author }}</td>
+          <td>{{ post.date }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
